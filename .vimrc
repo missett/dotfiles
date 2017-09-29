@@ -17,3 +17,7 @@ set lazyredraw  " don't redraw the screen so often
 set showmatch   " highlight matching parens/brackets/braces
 set incsearch   " search as chars are entered
 set hlsearch    " highlight matches
+
+let g:netrw_liststyle=3     " set file explorer to use tree view
+let g:netrw_banner=0        " remove file explorer top banner
+let g:netrw_browse_split=3
