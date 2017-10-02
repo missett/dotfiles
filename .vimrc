@@ -1,5 +1,7 @@
 syntax enable	"enable syntax processing
 
+set noswapfile " disable swap file creation
+
 set tabstop=4		" num visual spaces per tab
 set softtabstop=4	" num of spaces to insert when tab is pressed
 set expandtab		" tabs are spaces
@@ -20,5 +22,13 @@ set hlsearch    " highlight matches
 
 let g:netrw_liststyle=3     " set file explorer to use tree view
 let g:netrw_banner=0        " remove file explorer top banner
-let g:netrw_browse_split=3  " open files in a new tab
-let g:netrw_winsize=35      " file explorer will be 35% width of window
+" let g:netrw_browse_split=3  " open files in a new tab
+let g:netrw_browse_split=4  " open files in previously used window
+let g:netrw_altv=1          " open files in a window to the right of the file explorer when using 'v' key
+let g:netrw_winsize=20      " file explorer will be 35% width of window
+
+" start netrw when vim is started
+augroup ProjectDrawer
+    autocmd!
+    autocmd VimEnter * :Vexplore
+augroup END
