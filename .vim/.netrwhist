@@ -1,8 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/Users/rmi28/Projects/promo-event-service'
 let g:netrw_dirhist_2='/Users/rmi28/Projects/promo-event-service/.kitchen'
 let g:netrw_dirhist_3='/Users/rmi28/Projects/promo-event-service'
 let g:netrw_dirhist_4='/Users/rmi28/Projects/promo-event-service/templates'
 let g:netrw_dirhist_5='/Users/rmi28/Projects/promo-event-service/templates/default'
 let g:netrw_dirhist_6='/Users/rmi28'
+let g:netrw_dirhist_7='/Users/rmi28/Projects'
+let g:netrw_dirhist_8='/Users/rmi28/Projects/promo-event-service'
+let g:netrw_dirhist_9='/Users/rmi28/Projects/promo-event-service/src'

@@ -1,6 +1,10 @@
 " use pathogen package manager
 execute pathogen#infect()   
 
+" Themeing
+set background=dark
+colorscheme solarized
+
 syntax enable	" enable syntax processing
 
 set noswapfile " disable swap file creation
