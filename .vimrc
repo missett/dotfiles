@@ -41,10 +41,10 @@ let g:netrw_altv=1          " open files in a window to the right of the file ex
 let g:netrw_winsize=100      " define the proportion of the nwtrw window that will be split to display a new file when opening with o or v
 
 " start netrw when vim is started
-augroup ProjectDrawer
-    autocmd!
-    autocmd VimEnter * :Vexplore
-augroup END
+" augroup ProjectDrawer
+"     autocmd!
+"     autocmd VimEnter * :Vexplore
+" augroup END
 
 let g:gitgutter_realtime=1 " update gitgutter on file save
 
