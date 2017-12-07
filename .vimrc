@@ -18,6 +18,7 @@ set si              " In C-like language files indent one more level in some cas
 set number      " show line numbers
 set showcmd     " show command in bottom bar
 set cursorline  " highlight current line
+set nowrap      " turn off line wrapping
 
 filetype plugin on  " activate filetype detection and allow loading of language specific plugin files
 filetype indent on  " activate filetype detection and allow loading of language specific indent config files
