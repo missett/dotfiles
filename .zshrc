@@ -95,3 +95,4 @@ export GOPATH="$HOME/Projects/golang"
 export PATH=$PATH:$GOPATH/bin
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias sbtnew='/usr/local/bin/sbt new https://github.com/sbt/scala-seed.g8'
