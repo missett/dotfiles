@@ -3,7 +3,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=/Applications/VLC.app/Contents/MacOS:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/ryanmissett/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -85,9 +85,15 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# alias docker-stop-all="docker stop $(docker ps -a -q)"
+# alias docker-rm-all="docker rm $(docker ps -a -q)"
+# alias docker-rmi-all="docker rmi $(docker images -q)"
 
-# Git management
-alias config='/usr/local/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+export NVM_DIR="$HOME/.nvm"
+alias loadnvm='[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"'
+
+export GOPATH="$HOME/Projects/golang"
+export PATH=$PATH:$GOPATH/bin
+
+alias config='$(which git) --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias sbtnew='/usr/local/bin/sbt new https://github.com/sbt/scala-seed.g8'
