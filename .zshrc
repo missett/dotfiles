@@ -96,3 +96,7 @@ export PATH=$PATH:$GOPATH/bin
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias sbtnew='/usr/local/bin/sbt new https://github.com/sbt/scala-seed.g8'
+
+alias genpasswd='openssl rand -base64 32 | pbcopy'
+
+alias customerid='echo 28166205'
