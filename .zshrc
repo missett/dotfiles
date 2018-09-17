@@ -1,8 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=/Applications/VLC.app/Contents/MacOS:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/rmi28/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -94,7 +95,7 @@ alias loadnvm='[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"'
 export GOPATH="$HOME/Projects/golang"
 export PATH=$PATH:$GOPATH/bin
 
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias config='$(which git) --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 alias sbtnew='/usr/local/bin/sbt new https://github.com/sbt/scala-seed.g8'
 
 alias genpasswd='openssl rand -base64 32 | pbcopy'
