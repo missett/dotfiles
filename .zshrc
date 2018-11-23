@@ -89,6 +89,8 @@ source $ZSH/oh-my-zsh.sh
 # alias docker-rm-all="docker rm $(docker ps -a -q)"
 # alias docker-rmi-all="docker rmi $(docker images -q)"
 
+zstyle ':completion:*:ssh:*' hosts ~/Projects/nodes/**/*.rb(:t:s/rb/skybet.net/)
+
 export NVM_DIR="$HOME/.nvm"
 alias loadnvm='[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"'
 
@@ -101,3 +103,7 @@ alias sbtnew='/usr/local/bin/sbt new https://github.com/sbt/scala-seed.g8'
 alias genpasswd='openssl rand -base64 32 | pbcopy'
 
 alias customerid='echo 28166205'
+
+json-escape () {
+    printf '%s' "$1" | python -c 'import json,sys; print(json.dumps(sys.stdin.read()))'
+}
