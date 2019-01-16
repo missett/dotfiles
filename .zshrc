@@ -107,3 +107,7 @@ alias customerid='echo 28166205'
 json-escape () {
     printf '%s' "$1" | python -c 'import json,sys; print(json.dumps(sys.stdin.read()))'
 }
+
+uuid () {
+    uuidgen | tr '[:upper:]' '[:lower:]'
+}
