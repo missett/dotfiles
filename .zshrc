@@ -85,11 +85,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# alias docker-stop-all="docker stop $(docker ps -a -q)"
-# alias docker-rm-all="docker rm $(docker ps -a -q)"
-# alias docker-rmi-all="docker rmi $(docker images -q)"
-
-zstyle ':completion:*:ssh:*' hosts ~/Projects/nodes/**/*.rb(:t:s/rb/skybet.net/)
+if [ -d "/Users/$USER/Projects/nodes" ]; then
+    zstyle ':completion:*:ssh:*' hosts ~/Projects/nodes/**/*.rb(:t:s/rb/skybet.net/)
+fi
 
 export NVM_DIR="$HOME/.nvm"
 alias loadnvm='[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"'
