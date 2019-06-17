@@ -89,6 +89,8 @@ if [ -d "/Users/$USER/Projects/nodes" ]; then
     zstyle ':completion:*:ssh:*' hosts ~/Projects/nodes/**/*.rb(:t:s/rb/skybet.net/)
 fi
 
+source <(kubectl completion zsh)
+
 export NVM_DIR="$HOME/.nvm"
 alias loadnvm='[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"'
 
@@ -108,4 +110,14 @@ json-escape () {
 
 uuid () {
     uuidgen | tr '[:upper:]' '[:lower:]'
+}
+
+# java version helpers
+
+java-versions-get () {
+    /usr/libexec/java_home -V
+}
+
+java-versions-set () {
+    export JAVA_HOME="$(/usr/libexec/java_home -v $1)"
 }
