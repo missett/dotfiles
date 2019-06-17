@@ -33,6 +33,7 @@ set showmatch   " highlight matching parens/brackets/braces
 set incsearch   " search as chars are entered
 set hlsearch    " highlight matches
 set ignorecase  " ignore case when searching
+set backspace=indent,eol,start " allow backspace to work like normal in insert mode
 
 let g:netrw_liststyle=3     " set file explorer to use tree view
 let g:netrw_banner=0        " remove file explorer top banner
