@@ -1,6 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=/Applications/VLC.app/Contents/MacOS:$PATH
+export PATH=/Applications/IntelliJ\ IDEA\ CE.app/Contents/MacOS:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -120,4 +121,10 @@ java-versions-get () {
 
 java-versions-set () {
     export JAVA_HOME="$(/usr/libexec/java_home -v $1)"
+}
+
+java-versions-set 1.8.0
+
+ipgrep () {
+    find ~/Projects/nodes/nodes -name "$1.rb" -exec grep ipaddress {} \; | sort
 }

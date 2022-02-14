@@ -9,8 +9,8 @@ syntax enable	" enable syntax processing
 
 set noswapfile " disable swap file creation
 
-set tabstop=4		" num visual spaces per tab
-set softtabstop=4	" num of spaces to insert when tab is pressed
+set tabstop=2		" num visual spaces per tab
+set softtabstop=2	" num of spaces to insert when tab is pressed
 set expandtab		" tabs are spaces
 set ai              " Indent to the same level as previous line after a line break (ai = auto indent)
 set si              " In C-like language files indent one more level in some cases (si = smart indent)
