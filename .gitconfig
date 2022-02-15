@@ -1,0 +1,8 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+name = Ryan Missett
+email = ryan.missett@gmail.com
+
+[alias]
+glog = log --all --pretty='format:%d %Cgreen%h%Creset %an - %s' --graph
