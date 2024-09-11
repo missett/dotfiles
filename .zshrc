@@ -86,20 +86,12 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-if [ -d "/Users/$USER/Projects/nodes" ]; then
-    zstyle ':completion:*:ssh:*' hosts ~/Projects/nodes/**/*.rb(:t:s/rb/skybet.net/)
-fi
-
 # source <(kubectl completion zsh)
-
-export NVM_DIR="$HOME/.nvm"
-alias loadnvm='[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"'
 
 export GOPATH="$HOME/Projects/golang"
 export PATH=$PATH:$GOPATH/bin
 
 alias config='$(which git) --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-alias sbtnew='/usr/local/bin/sbt new https://github.com/sbt/scala-seed.g8'
 
 alias genpasswd='openssl rand -base64 32 | pbcopy'
 
@@ -125,6 +117,6 @@ java-versions-set () {
 
 # java-versions-set 1.8.0
 
-ipgrep () {
-    find ~/Projects/nodes/nodes -name "$1.rb" -exec grep ipaddress {} \; | sort
-}
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
