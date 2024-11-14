@@ -73,3 +73,6 @@ function! SyntasticCheckHook(errors)
 endfunction
 
 set statusline+=%F
+
+" allow trackpad to scoll in vim 
+:set mouse=a
