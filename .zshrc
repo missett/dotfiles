@@ -141,3 +141,7 @@ sbt() {
 }
 
 alias serve='python3 -m http.server'
+
+terraform() {
+  docker run --platform linux/arm64 --rm --interactive --tty --name terraform --volume `pwd`:/mnt hashicorp/terraform:1.9 -chdir=/mnt $@
+}
