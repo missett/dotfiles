@@ -50,29 +50,25 @@ let g:netrw_winsize=100      " define the proportion of the nwtrw window that wi
 
 let g:gitgutter_realtime=1 " update gitgutter on file save
 
-" syntastic settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-let g:elm_syntastic_show_warnings = 1
-
-let g:syntastic_javascript_eslint_exe='$(npm bin)/eslint'
-let g:syntastic_javascript_checkers = ['eslint']
-
-" see :h syntastic-loclist-callback
-function! SyntasticCheckHook(errors)
-    if !empty(a:errors)
-        let g:syntastic_loc_list_height = min([len(a:errors), 10])
-    endif
-endfunction
-
 set statusline+=%F
 
 " allow trackpad to scoll in vim 
-:set mouse=a
+" :set mouse=a
+
+" let g:terraform_fmt_on_save=1
+
+let g:ale_lint_on_save = 1
+let g:ale_linters = {'python': ['pylint'], 'terraform': ['terraform']}
+" let g:ale_python_pylint_executable = '/Users/ryan.missett/.vim/scripts/pylint.sh'
+let g:ale_python_pylint_use_global = 1
+" let g:ale_python_pylint_change_directory = 0
+
+let g:ale_fix_on_save = 1
+let g:ale_fixers = {'python': ['black'], 'terraform': ['terraform']}
+" let g:ale_python_black_executable = '/Users/ryan.missett/.vim/scripts/black.sh'
+let g:ale_python_black_use_global = 1
+" let g:ale_python_black_change_directory = 0
+
+let g:ale_sign_column_always = 1
+let g:ale_set_signs = 1
+let g:ale_set_highlights = 1

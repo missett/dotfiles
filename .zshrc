@@ -110,8 +110,6 @@ alias config='$(which git) --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 alias genpasswd='openssl rand -base64 32 | pbcopy'
 
-alias customerid='echo 28166205'
-
 json-escape () {
     printf '%s' "$1" | python -c 'import json,sys; print(json.dumps(sys.stdin.read()))'
 }
@@ -136,12 +134,16 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-sbt() {
-  docker run --platform linux/arm64 --rm --name sbt --volume ~/.sbt:/root/.sbt --volume ~/.ivy2:/root/.ivy2 --volume ~/.cache:/root/.cache --volume `pwd`:/tmp/code --workdir /tmp/code --interactive --tty sbtscala/scala-sbt:eclipse-temurin-jammy-21.0.1_12_1.9.7_2.13.12 sbt $@
-}
-
 alias serve='python3 -m http.server'
 
+ssh-add ~/.ssh/id_ed25519.missett.github.io 2>/dev/null
+ssh-add ~/.ssh/id_ed25519.nhs.net 2>/dev/null
+ssh-add ~/.ssh/id_ed25519 2>/dev/null
+
 terraform() {
-  docker run --platform linux/arm64 --rm --interactive --tty --name terraform --volume `pwd`:/mnt hashicorp/terraform:1.9 -chdir=/mnt $@
+  docker run --platform linux/arm64 --rm --interactive --tty --name terraform --volume `pwd`:/mnt hashicorp/terraform:1.11.3 -chdir=/mnt $@
+}
+
+sbt() {
+  docker run --platform linux/arm64 --rm --name sbt --volume ~/.sbt:/root/.sbt --volume ~/.ivy2:/root/.ivy2 --volume ~/.cache:/root/.cache --volume `pwd`:/tmp/code --workdir /tmp/code --interactive --tty sbtscala/scala-sbt:eclipse-temurin-jammy-21.0.1_12_1.9.7_2.13.12 sbt $@
 }

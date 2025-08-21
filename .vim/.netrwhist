@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =5
+let g:netrw_dirhist_5='/Users/ryan.missett/Projects/secondary-care-test-results/terraform/application'
+let g:netrw_dirhist_4='/Users/ryan.missett/Projects/secondary-care-test-results/terraform/main'
+let g:netrw_dirhist_3='/Users/ryan.missett/Projects/secondary-care-test-results/.idea/inspectionProfiles'
+let g:netrw_dirhist_2='/Users/ryan.missett/Projects/nhs-test-results-poc/src'
+let g:netrw_dirhist_1='/Users/ryan.missett/Projects/nhs-test-results-poc/.github/workflows'
